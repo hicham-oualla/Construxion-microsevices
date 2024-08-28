@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.HM</groupId>
-	<artifactId>Project</artifactId>
+	<artifactId>Tache</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Project</name>
+	<name>Tache</name>
 	<description>microsevices</description>
 	<url/>
 	<licenses>
@@ -67,13 +67,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.glassfish.hk2</groupId>
-            <artifactId>hk2-api</artifactId>
-            <version>3.1.1</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+	</dependencies>
 	<dependencyManagement>
 		<dependencies>
 			<dependency>

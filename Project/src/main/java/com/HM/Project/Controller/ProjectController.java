@@ -2,8 +2,10 @@ package com.HM.Project.Controller;
 
 
 import com.HM.Project.Services.ProjectService;
+import com.HM.Project.model.FullProjectResponse;
 import com.HM.Project.model.Project;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +31,13 @@ public class ProjectController {
     @DeleteMapping
     public void deleteProject(@PathVariable int id) {
         projectService.deleteProject(id);
+    }
+
+    @GetMapping("/projectWithTasks/{projectID}")
+    public FullProjectResponse getAllProjects(
+            @PathVariable int projectID
+    ) {
+        return projectService.findProjectwithTasks(projectID);
     }
 
 }

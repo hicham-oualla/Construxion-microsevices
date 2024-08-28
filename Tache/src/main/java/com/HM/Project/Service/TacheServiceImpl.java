@@ -41,4 +41,9 @@ public class TacheServiceImpl  implements TacheService{
         tacheRepository.deleteById(id);
 
     }
+
+    @Override
+    public List<Tache> tachesByProjetId(int projetId) {
+        return tacheRepository.findByProjectID(projetId);
+    }
 }

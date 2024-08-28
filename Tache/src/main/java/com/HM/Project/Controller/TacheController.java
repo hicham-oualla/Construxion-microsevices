@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/Tache")
+@RequestMapping("/api/tache")
 public class TacheController {
     @Autowired
     private TacheService tacheService;
@@ -19,9 +19,14 @@ public class TacheController {
         return tacheService.createTache(    tache);
 
     }
-     @GetMapping
+     @GetMapping("/all")
     public List<Tache> getAllTaches() {
         return tacheService.getAllTache();
+    }
+
+    @GetMapping("/{id}")
+    public List<Tache> getTachesByProjetId(@PathVariable int id) {
+        return tacheService.tachesByProjetId(id);
     }
 
     @PutMapping

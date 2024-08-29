@@ -8,17 +8,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
-        <module name="Project" />
-        <module name="Project (1)" />
         <module name="discovory" />
+        <module name="Taches" />
         <module name="gateway" />
+        <module name="Projets" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Project" target="21" />
+      <module name="Project (1)" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Project" options="-parameters" />
       <module name="Project (1)" options="-parameters" />
+      <module name="Projets" options="-parameters" />
+      <module name="Taches" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovory" options="-parameters" />
       <module name="gateway" options="-parameters" />

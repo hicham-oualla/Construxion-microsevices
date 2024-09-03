@@ -1,7 +1,7 @@
-package com.H.Taches.service;
+package com.HM.Taches.service;
 
-import com.H.Taches.model.FullTachesResponse;
-import com.H.Taches.model.Taches;
+import com.HM.Taches.model.FullTachesResponse;
+import com.HM.Taches.model.Taches;
 
 import java.util.List;
 
@@ -12,5 +12,5 @@ public interface TachesService {
     void deleteTaches(Long id);
     Taches changerStatut(Long id, Taches taches);
     List<Taches> getAllTachesByProjet(Long id);
-
+    FullTachesResponse tachWithRessources(Long id);
 }

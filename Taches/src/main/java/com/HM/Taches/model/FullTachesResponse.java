@@ -1,6 +1,6 @@
-package com.H.Taches.model;
+package com.HM.Taches.model;
 
-import com.H.Taches.model.enums.Statut;
+import com.HM.Taches.model.enums.Statut;
 import lombok.*;
 
 import java.sql.Date;
@@ -16,5 +16,5 @@ public class FullTachesResponse {
     private Date dateDebut;
     private Date dateFin;
     private Statut statut;
-   // private List<Ressources> ressources;
+    private List<Ressources> ressources;
 }

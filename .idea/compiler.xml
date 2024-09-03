@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
+        <module name="Ressources" />
         <module name="discovory" />
         <module name="Taches" />
         <module name="gateway" />
@@ -24,6 +25,7 @@
       <module name="Project" options="-parameters" />
       <module name="Project (1)" options="-parameters" />
       <module name="Projets" options="-parameters" />
+      <module name="Ressources" options="-parameters" />
       <module name="Taches" options="-parameters" />
       <module name="config-server" options="-parameters" />
       <module name="discovory" options="-parameters" />

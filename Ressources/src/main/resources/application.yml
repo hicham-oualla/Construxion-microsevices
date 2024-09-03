@@ -5,15 +5,15 @@ eureka:
     service-url:
       defautltZone: http://localhost:8788/eureka
 server:
-  port: 8091
+  port: 8081
 spring:
   application:
-    name: projet
+    name: ressources
   config:
     import: optional:configserver:http://localhost:8888
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/projets
+    url: jdbc:postgresql://localhost:5432/ressources
     username: postgres
     password: 000014RM
   jpa:
@@ -24,10 +24,3 @@ spring:
   flyway:
     locations: db/megration
     baseline-on-migrate: true
-
-application:
-  config:
-    taches-url: http://localhost:8070/api/taches
-
-
-

@@ -1,8 +1,8 @@
-package com.H.Taches.controller;
+package com.HM.Taches.controller;
 
-import com.H.Taches.model.FullTachesResponse;
-import com.H.Taches.model.Taches;
-import com.H.Taches.service.TachesService;
+import com.HM.Taches.model.FullTachesResponse;
+import com.HM.Taches.model.Taches;
+import com.HM.Taches.service.TachesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +27,10 @@ public class TachesController {
         return tachesService.getAll();
     }
 
-
+    @GetMapping("/{id}")
+    public FullTachesResponse tachesWithRessources(@PathVariable Long id){
+        return tachesService.tachWithRessources(id);
+    }
 
     @GetMapping("/projet/{id}")
     public List<Taches> tachesOfProjet(@PathVariable Long id){

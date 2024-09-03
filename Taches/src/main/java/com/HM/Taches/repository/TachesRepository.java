@@ -1,6 +1,6 @@
-package com.H.Taches.repository;
+package com.HM.Taches.repository;
 
-import com.H.Taches.model.Taches;
+import com.HM.Taches.model.Taches;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

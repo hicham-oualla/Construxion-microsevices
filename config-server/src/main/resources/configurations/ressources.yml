@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ressources
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ressources
+    username: postgres
+    password: 000014RM
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    locations: db/megration
+    baseline-on-migrate: true

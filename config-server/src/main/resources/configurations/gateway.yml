@@ -1,0 +1,34 @@
+eureka:
+  client:
+    register-with-eureka: false
+
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:9999
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      mvc:
+        routes:
+          - id: projets
+            uri: http://localhost:8091
+            predicates:
+              - Path=/api/projets/**
+
+          - id: taches
+            uri: http://localhost:8071
+            predicates:
+              - Path=/api/taches/**
+
+          - id: ressources
+            uri: http://localhost:8081
+            predicates:
+              - Path=/api/ressources/**
+
+server:
+  port: 8222
+

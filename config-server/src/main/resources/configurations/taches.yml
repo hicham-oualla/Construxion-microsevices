@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: taches
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/taches
+    username: postgres
+    password: 000014RM
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  flyway:
+    locations: db/megration
+    baseline-on-migrate: true
+    
+application:
+  config:
+    ressources-url: http://localhost:8081/api/ressources/

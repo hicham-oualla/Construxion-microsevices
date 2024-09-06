@@ -1,10 +1,7 @@
 package com.HM.Taches.model;
 
 import com.HM.Taches.model.enums.Statut;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,6 +21,9 @@ public class Taches {
     private String description;
     private Date dateDebut;
     private Date dateFin;
+
+    @Enumerated(EnumType.STRING)
     private Statut statut;
+
     private Long projetId;
 }

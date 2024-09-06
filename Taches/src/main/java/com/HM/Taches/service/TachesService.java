@@ -13,4 +13,5 @@ public interface TachesService {
     Taches changerStatut(Long id, Taches taches);
     List<Taches> getAllTachesByProjet(Long id);
     FullTachesResponse tachWithRessources(Long id);
+
 }

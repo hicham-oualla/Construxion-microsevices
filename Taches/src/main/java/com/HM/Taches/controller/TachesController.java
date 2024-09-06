@@ -5,6 +5,7 @@ import com.HM.Taches.model.Taches;
 import com.HM.Taches.service.TachesService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,4 +52,5 @@ public class TachesController {
     public void delete(@PathVariable Long id){
         tachesService.deleteTaches(id);
     }
+
 }

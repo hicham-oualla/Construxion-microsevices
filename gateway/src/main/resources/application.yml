@@ -1,1 +1,31 @@
-spring.application.name=gateway
+eureka:
+  client:
+    register-with-eureka: false
+
+server:
+  port: 8222
+
+spring:
+  application:
+    name: gateway
+  config:
+    import: optional:configserver:http://localhost:8888/
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      mvc:
+        routes:
+          - id: projets
+            uri: http://localhost:8091/
+            predicates:
+              - Path=/api/projets/**
+          - id: taches
+            uri: http://localhost:8071/
+            predicates:
+              - Path=/api/taches/**
+          - id: ressources
+            uri: http://localhost:8081/**
+            predicates:
+              - Path=/api/ressources/**

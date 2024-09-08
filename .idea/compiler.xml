@@ -9,6 +9,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
         <module name="Ressources" />
+        <module name="Gestion_utilisateurs" />
+        <module name="Gestion_utilisateurs (1)" />
         <module name="discovory" />
         <module name="Taches" />
         <module name="gateway" />
@@ -16,12 +18,15 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="personne" target="17" />
       <module name="Project" target="21" />
       <module name="Project (1)" target="21" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Gestion_utilisateurs" options="-parameters" />
+      <module name="Gestion_utilisateurs (1)" options="-parameters" />
       <module name="Project" options="-parameters" />
       <module name="Project (1)" options="-parameters" />
       <module name="Projets" options="-parameters" />
@@ -30,6 +35,7 @@
       <module name="config-server" options="-parameters" />
       <module name="discovory" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="personne" options="-parameters" />
     </option>
   </component>
 </project>

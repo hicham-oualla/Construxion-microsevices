@@ -1,31 +1,40 @@
 eureka:
   client:
-    register-with-eureka: false
-
-server:
-  port: 8222
+    register-with-eureka: true
 
 spring:
   application:
     name: gateway
+  main:
+    web-application-type: reactive
+    allow-circular-references: true
   config:
-    import: optional:configserver:http://localhost:8888/
+    import: optional:configserver:http://localhost:8888
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-      mvc:
-        routes:
-          - id: projets
-            uri: http://localhost:8091/
-            predicates:
-              - Path=/api/projets/**
-          - id: taches
-            uri: http://localhost:8071/
-            predicates:
-              - Path=/api/taches/**
-          - id: ressources
-            uri: http://localhost:8081/**
-            predicates:
-              - Path=/api/ressources/**
+      routes:
+        - id: projets
+          uri: http://localhost:8091/
+          predicates:
+            - Path=/api/projets/**
+          filters:
+            - name: AuthenticationFilter
+        - id: taches
+          uri: http://localhost:8071/
+          predicates:
+            - Path=/api/taches/**
+          filters:
+            - name: AuthenticationFilter
+        - id: ressources
+          uri: http://localhost:8081
+          predicates:
+            - Path=/api/ressources/**
+          filters:
+            - name: AuthenticationFilter
+        - id: authentication
+          uri: http://localhost:8074/
+          predicates:
+            - Path=/api/v1/auth/**
+
+server:
+  port: 8222
